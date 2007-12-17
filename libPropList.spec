@@ -15,7 +15,6 @@ Group:		System/Libraries
 Source:		ftp://ftp.windowmaker.org/libs/libPropList-%{version}.tar.bz2
 
 BuildRequires:	flex
-Buildroot:	%{_tmppath}/libPropList-root
 Obsoletes:	wmakerconf <= 2.5-1mdk
 
 %description
