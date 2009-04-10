@@ -68,7 +68,7 @@ This package contains Static libraries and header files needs for development.
 %patch0 -p0
 
 %build
-%configure2_5x
+%configure2_5x --host=%{_host} --target=%{_target_platform}
 make
 
 %install
