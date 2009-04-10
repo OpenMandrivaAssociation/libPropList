@@ -13,6 +13,7 @@ License:	GPL/LGPL (see files COPYING and COPYING.LIB in /usr/share/doc/libPropLi
 Group:		System/Libraries
 
 Source:		ftp://ftp.windowmaker.org/libs/libPropList-%{version}.tar.bz2
+Patch0:		libPropList-0.10.1-fix-str-fmt.patch
 
 BuildRequires:	flex
 Buildroot:	%{_tmppath}/libPropList-root
@@ -63,14 +64,16 @@ OPENSTEP themselves.
 This package contains Static libraries and header files needs for development.
 
 %prep 
-%setup -q 
+%setup -q
+%patch0 -p0
 
 %build
-%configure
+%configure2_5x
 make
 
 %install
-%makeinstall
+rm -fr %buildroot
+%makeinstall_std
 
 %if %mdkversion < 200900
 %post -n %libname -p /sbin/ldconfig
@@ -81,12 +84,12 @@ make
 %endif
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %buildroot
 
 %files -n %libname
 %defattr(-,root,root)
 %doc AUTHORS COPYING COPYING.LIB ChangeLog NEWS README TODO
-%{_libdir}/lib*.so.*
+%{_libdir}/lib*.so.%{major}*
 
 %files -n %libname-devel
 %defattr(-,root,root)
