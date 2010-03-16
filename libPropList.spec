@@ -1,5 +1,5 @@
 %define ver 0.10.1
-%define rel %mkrel 13
+%define rel %mkrel 14
 
 %define fname PropList
 %define major 0
