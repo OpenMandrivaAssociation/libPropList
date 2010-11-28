@@ -6,7 +6,7 @@
 Summary:	Library for configuration or preference files compatible GNUstep/OPENSTEP
 Name:		libPropList
 Version:	0.10.1
-Release:	%mkrel 15
+Release:	%mkrel 16
 License:	GPL/LGPL
 Group:		System/Libraries
 
