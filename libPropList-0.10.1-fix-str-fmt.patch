@@ -1,0 +1,20 @@
+--- util.c.str	2009-04-10 08:17:17.000000000 +0200
++++ util.c	2009-04-10 08:17:38.000000000 +0200
+@@ -213,7 +213,7 @@
+ 	sprintf(actual_filename, "%s/GNUstep", env);
+     }
+   else
+-    sprintf(actual_filename, env);
++    sprintf(actual_filename, "%s",env);
+ 
+   sprintf(&(actual_filename[strlen(actual_filename)]), "/");
+ 
+@@ -221,7 +221,7 @@
+   if(!env)
+     sprintf(&(actual_filename[strlen(actual_filename)]), "Defaults");
+   else
+-    sprintf(&(actual_filename[strlen(actual_filename)]), env);
++    sprintf(&(actual_filename[strlen(actual_filename)]), "%s", env);
+ 
+   return ManglePath(actual_filename);
+ }
