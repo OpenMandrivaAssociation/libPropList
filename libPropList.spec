@@ -3,6 +3,8 @@
 %define libname	%mklibname %{fname} %{major}
 %define devname	%mklibname %{fname} -d
 
+%define _disable_lto 1
+
 Summary:	Library for configuration or preference files compatible GNUstep/OPENSTEP
 Name:		libPropList
 Version:	0.10.1
