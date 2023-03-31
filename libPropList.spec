@@ -8,7 +8,7 @@
 Summary:	Library for configuration or preference files compatible GNUstep/OPENSTEP
 Name:		libPropList
 Version:	0.10.1
-Release:	29
+Release:	30
 License:	LGPLv2
 Group:		System/Libraries
 Source0:	ftp://ftp.windowmaker.org/libs/%{name}-%{version}.tar.bz2
